@@ -7,7 +7,7 @@ const Nav = () => {
   const [menu, setMenu] = useState(false);
 
   return (
-    <header className="padding-x py-8 absolute z-10 w-full bg-white shadow-md">
+    <header className="padding-x py-8 absolute z-50 w-full bg-white shadow-md">
       <nav className="flex justify-between items-center max-container">
         {/* Logo */}
         <a href="/">
@@ -20,13 +20,17 @@ const Nav = () => {
             <li key={item.label}>
               <a
                 href={item.href}
-                className="font-montserrat leading-normal text-lg text-gray-600 hover:text-coral-red transition"
+                className="font-montserrat leading-normal text-lg text-slate-gray hover:text-coral-red transition"
               >
                 {item.label}
               </a>
             </li>
           ))}
         </ul>
+
+        <div>
+          <a href="/" className="font-montserrat leading-normal text-lg font-semibold max-lg:hidden">Signup/Login</a>
+        </div>
 
         {/* Hamburger icon (only visible on mobile) */}
         <div
@@ -39,11 +43,11 @@ const Nav = () => {
 
       {/* Mobile dropdown menu */}
       {menu && (
-        <ul className="flex flex-col lg:hidden bg-white border-t border-gray-200 mt-2 animate-fadeIn">
+        <ul className="flex flex-col lg:hidden bg-white border-t border-gray-200 justify-center items-center mt-2 animate-fadeIn">
           {navLinks.map((item) => (
             <li
               key={item.label}
-              className="py-3 px-5 hover:bg-gray-100 text-gray-700 cursor-pointer"
+              className="py-3 px-5 hover:bg-gray-100 text-slate-gray cursor-pointer"
               onClick={() => setMenu(false)} // closes menu when clicked
             >
               <a href={item.href}>{item.label}</a>

@@ -6,6 +6,10 @@
    🎨 THEME (Replaces tailwind.config.js)
 --------------------------------*/
 @theme {
+  /* 🎯 Background Images */
+  --background-hero: url('./assets/images/collection-background.svg');
+  --background-card: url('./assets/images/thumbnail-background.svg');
+
   /* 🎯 Fonts */
   --font-palanquin: "Palanquin", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
@@ -42,10 +46,15 @@
 
   /* 🎯 Screens (media queries) */
   --breakpoint-wide: 1440px; 
+}
+@layer utilities {
+  .bg-card {
+    background-image: var(--background-card);
+  }
 
-  /* 🎯 Background Images */
-  --background-hero: url('assets/images/collection-background.svg');
-  --background-card: url('assets/images/thumbnail-background.svg');
+  .bg-hero{
+    background-image: var(--background-hero);
+  }
 }
 
 /* -------------------------------
