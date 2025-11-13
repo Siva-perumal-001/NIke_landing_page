@@ -116,3 +116,15 @@
 @utility info-text {
   @apply font-[var(--font-montserrat)] text-[var(--color-slate-gray)] text-lg leading-7;
 }
+
+/* Hide scrollbar but allow scrolling */
+::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;     
+  overflow-x: hidden;
+}
+
