@@ -5,7 +5,7 @@ const Button = ({label,iconURL}) => {
         items-center px-7 py-4 gap-2"
     >
         {label}
-        <img src={iconURL} alt="icon" className="ml-2 rounded-full w-5 h-5" />
+        {iconURL && <img src={iconURL} alt="icon" className="ml-2 rounded-full w-5 h-5" />}
     </button>
   )
 }
